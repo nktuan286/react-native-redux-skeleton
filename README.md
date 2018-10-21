@@ -1,6 +1,6 @@
 # react-native-redux-skeleton
 
-# SETUP ENVIRONMENT FOR REACT NATIVE
+# SETUP ENVIRONMENT FOR REACT NATIVE for Android
 * install jdk
 * install nodejs
 * install python2
