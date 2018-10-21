@@ -1,11 +1,11 @@
 # react-native-redux-skeleton
 
 # SETUP ENVIRONMENT FOR REACT NATIVE
-1/ install jdk
-2/ install nodejs
-3/ install python2
-4/ install android studio
-5/ setting environment system
+* install jdk
+* install nodejs
+* install python2
+* install android studio
+* setting environment system
 
 # QUICKSTART
 * git clone https://github.com/nktuan286/react-native-redux-skeleton.git
