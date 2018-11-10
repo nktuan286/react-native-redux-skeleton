@@ -7,7 +7,7 @@
 * install android studio
 * setting environment system
 
-# QUICKSTART
+# QUICKSTART for Android
 * git clone https://github.com/nktuan286/react-native-redux-skeleton.git
 * cd to react-native-redux-skeleton directory => run command: npm install --save
 * run Android Studio => open react-native-redux-skeleton/android directory => for building gradle
