@@ -1,10 +1,8 @@
-// @flow
-
 import {
     FETCH_DATA_ERROR,
     FETCH_DATA_REQUEST,
     FETCH_DATA_SUCCESS,
-} from '../constants/action-types';
+} from '../common/actionTypes';
 
 const initialState = {
     weatherInfo: {},
@@ -12,12 +10,13 @@ const initialState = {
     error: false,
 };
 
-export const getWeatherSelector = (state) => ({ ...state.weather });
+// export const getWeatherSelector = (state) => ({ ...state.weather });
 
 const weatherReducer = (state = initialState, action) => {
     switch (action.type) {
         case FETCH_DATA_SUCCESS: {
             return {
+                ...state,
                 isLoading: false,
                 error: false,
                 weatherInfo: action.payload.weatherInfo,
@@ -25,6 +24,7 @@ const weatherReducer = (state = initialState, action) => {
         }
         case FETCH_DATA_REQUEST: {
             return {
+                ...state,
                 isLoading: true,
                 error: false,
                 weatherInfo: {},

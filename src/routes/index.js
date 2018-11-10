@@ -3,7 +3,7 @@ import {BackHandler} from 'react-native';
 import {connect} from 'react-redux';
 import {addNavigationHelpers, NavigationActions} from 'react-navigation';
 
-import Navigator from './navigation-configuration';
+import Navigator from './navigationConfig';
 
 class AppWithNavigation extends Component {
 

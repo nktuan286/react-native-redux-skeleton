@@ -3,9 +3,10 @@ import {Icon} from 'react-native-elements';
 import {Dimensions, Platform} from 'react-native';
 import {createStackNavigator, createBottomTabNavigator} from 'react-navigation';
 
-import InfoComponent from '../components/info-component/info-component';
-import SettingComponent from '../components/setting-component/setting-component';
-import WeatherContainer from '../containers/weather-container/weather-container';
+import SettingComponent from '../components/setting/settingComponent';
+import WeatherContainer from '../containers/weather/weatherContainer';
+
+import LoginContainer from '../containers/auth/loginContainer';
 
 let screen = Dimensions.get('window');
 
@@ -15,13 +16,6 @@ export const Tabs = createBottomTabNavigator({
         navigationOptions: {
             tabBarLabel: 'Home',
             tabBarIcon: ({tintColor}) => <Icon name="home" type="entypo" size={28} color={tintColor}/>
-        },
-    },
-    'Info': {
-        screen: InfoComponent,
-        navigationOptions: {
-            tabBarLabel: 'Info',
-            tabBarIcon: ({tintColor}) => <Icon name="info" type="entypo" size={28} color={tintColor}/>
         },
     },
     'Setting': {
@@ -54,10 +48,12 @@ export default Navigator = createStackNavigator(
             navigationOptions: ({navigation}) => ({
                 gesturesEnabled: false,
             })
-        }
+        },
+        Login: { screen: LoginContainer },
     },
     {
         headerMode: "none",
-        mode: "modal"
+        title: 'Main',
+        initialRouteName: 'Login',
     }
 );

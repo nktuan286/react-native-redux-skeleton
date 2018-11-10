@@ -5,7 +5,7 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#0067a7',
+        backgroundColor: 'white',
         justifyContent: 'center', // main axis
         alignItems: 'center', // cross axis'
     },
@@ -17,7 +17,7 @@ export default StyleSheet.create({
     weatherInfoText: {
         textAlign: 'center',
         padding: 20,
-        color: "yellow",
+        color: "blue",
         fontSize: 20
     },
 });
