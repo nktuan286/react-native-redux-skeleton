@@ -5,7 +5,7 @@ import {
     Text,
     ActivityIndicator,
 } from 'react-native';
-import styles from './styles/style';
+import styles from './stylesheets/style';
 
 const SettingComponent = (props) => {
 

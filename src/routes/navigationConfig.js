@@ -5,7 +5,6 @@ import {createStackNavigator, createBottomTabNavigator} from 'react-navigation';
 
 import SettingComponent from '../components/setting/settingComponent';
 import WeatherContainer from '../containers/weather/weatherContainer';
-
 import LoginContainer from '../containers/auth/loginContainer';
 
 let screen = Dimensions.get('window');

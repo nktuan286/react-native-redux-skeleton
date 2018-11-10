@@ -1,15 +1,15 @@
 import { connect } from 'react-redux';
 import LoginComponent from '../../components/login/loginComponent';
-import { fetchLogin } from '../../actions/auth/fetchLogin';
+import { fetchLogin } from '../../actions/auth/loginAction';
 
 const mapStateToProps = (state, ownProps) => {
     return {
-       
+       ...state.auth
     };
 }
 
 const mapDispatchToProps = (dispatch) => ({
-    fetchLogin: (dataLogin) => dispatch(fetchLogin(dataLogin)),
+    doLogin: (dataLogin) => dispatch(fetchLogin(dataLogin)),
 });
 
 export default connect(

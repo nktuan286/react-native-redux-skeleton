@@ -1,5 +1,4 @@
-//import library
-import { LOGIN_REQUEST } from '../../common/actionTypes';
+import { LOGIN_REQUEST, LOGIN_FAILURE, LOGIN_SUCCESS } from '../../common/actionTypes';
 import { doLogin } from '../../services/authServices';
 
 export const requestLogin = (username, password) => ({
@@ -24,8 +23,10 @@ export const fetchLogin = (dataLogin) => (
         dispatch(requestLogin());
         return doLogin(dataLogin)
             .then((result) => {
-                if(result !== null) {
+                if(result.data.status === true) {
                     dispatch(requestLoginSuccess(result))
+                } else {
+                    dispatch(requestLoginFailure())
                 }
             }).catch(() => {
                 dispatch(requestLoginFailure())

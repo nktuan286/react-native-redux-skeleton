@@ -8,7 +8,7 @@ import {
     Alert,
     TextInput
 } from 'react-native';
-import styles from './styles/style';
+import styles from './stylesheets/style';
 
 class WeatherComponent extends React.Component {
     constructor(props) {
@@ -16,6 +16,12 @@ class WeatherComponent extends React.Component {
         this.state = {
             temp: ''
         };
+    }
+    
+    componentDidMount = () => {
+        this.setState({
+            temp: ''
+        });
     }
 
     getErrorMessage = () => {
@@ -73,7 +79,7 @@ class WeatherComponent extends React.Component {
                 {isLoading ? <ActivityIndicator /> : null}
                 {error ? this.getErrorMessage() : null}
                 {hasWeatherData ? this.getWeatherInfo(weatherInfo) : null}
-                <TextInput style={{ margin: 10, width:200, borderColor: 'gray', borderWidth: 1 }}
+                <TextInput style={{ margin: 10, width:200, borderColor: 'gray', borderWidth: 1, padding:2 }}
                     onChangeText={(text) => this.setState({ temp: text.trim() })}
                     value={this.state.temp}
                     placeholder='Enter location!'
